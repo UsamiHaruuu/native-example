@@ -33,7 +33,7 @@ class App extends React.Component {
   }
   getPermissionAsync = async () => {
     // Camera roll Permission  
-    if ('ios' === 'ios') {
+    if (Platform === 'ios') {
       const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
       if (status !== 'granted') {
         alert('Sorry, we need camera roll permissions to make this work!');
